@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>العقارات المفضلة | صَرح مصر</title>
+  
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            tajawal: ['Tajawal', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            navy: {
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#020617',
+            },
+            gold: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-700 selection:text-white">
+
+  <!-- Sticky Main Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-900 via-brand-800 to-navy-900 flex items-center justify-center text-gold-500 shadow-md shadow-brand-950/20 group-hover:scale-105 transition-transform duration-200">
+              <i data-lucide="building-2" class="w-6 h-6 stroke-[2.2]"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-black text-navy-900 tracking-tight flex items-center gap-1">
+                صَرح <span class="text-gold-600 font-light text-xl">مصر</span>
+              </span>
+              <span class="text-[11px] font-semibold text-slate-500 tracking-wider -mt-1">منصة العقارات الفاخرة</span>
+            </div>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold text-slate-700">
+            <a href="index.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">الرئيسية</a>
+            <a href="properties.html?type=للبيع" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للبيع</a>
+            <a href="properties.html?type=للإيجار" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للإيجار</a>
+            <a href="properties.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">كل العقارات</a>
+            <a href="calculator.html" class="px-3.5 py-2 rounded-xl text-gold-700 bg-gold-50 hover:bg-gold-100 border border-gold-200/60 font-bold transition flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-4 h-4 text-gold-600"></i>
+              <span>حاسبة التمويل</span>
+            </a>
+            <a href="contact.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">تواصل معنا</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="add-property.html" class="flex items-center gap-2 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-700 text-white px-5 py-2.5 rounded-xl font-bold shadow-md shadow-gold-600/25 transition">
+            <i data-lucide="plus-circle" class="w-5 h-5"></i>
+            <span>أضف عقارك مجاناً</span>
+          </a>
+
+          <button id="mobile-nav-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="bg-gradient-to-b from-slate-100 to-transparent py-10 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <h1 class="text-2xl sm:text-4xl font-black text-navy-900">عقاراتك المفضلة المحفوظة</h1>
+          <span class="bg-red-100 text-red-800 text-xs font-black px-3 py-1 rounded-full font-mono" id="fav-page-count">0 عقار</span>
+        </div>
+        <p class="text-slate-500 text-sm mt-1">راجع وقارن الوحدات التي نالت اهتمامك للرجوع إليها في أي وقت</p>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button onclick="clearAllFavorites()" class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:text-red-600 text-slate-600 font-bold text-xs flex items-center gap-1.5 transition">
+          <i data-lucide="trash-2" class="w-4 h-4"></i>
+          <span>تفريغ قائمة المفضلة</span>
+        </button>
+        <a href="properties.html" class="px-4 py-2 rounded-xl bg-brand-900 text-white font-bold text-xs flex items-center gap-1.5 hover:bg-brand-800 transition">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+          <span>تصفح المزيد</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Favorites Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full">
+    
+    <!-- Empty State -->
+    <div id="fav-empty-state" class="hidden py-20 text-center bg-white rounded-3xl border border-dashed border-slate-300 p-8 max-w-lg mx-auto space-y-4">
+      <div class="w-16 h-16 rounded-full bg-red-50 text-red-500 flex items-center justify-center mx-auto">
+        <i data-lucide="heart" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-xl font-bold text-navy-900">قائمة المفضلة فارغة حالياً</h3>
+      <p class="text-xs text-slate-500 leading-relaxed">
+        أثناء تصفحك للعقارات، اضغط على أيقونة القلب على أي عقار لحفظه هنا للمقارنة والمتابعة لاحقاً.
+      </p>
+      <a href="properties.html" class="inline-flex items-center gap-2 bg-brand-900 text-white text-xs font-bold px-6 py-3 rounded-xl hover:bg-brand-800 transition shadow">
+        <i data-lucide="search" class="w-4 h-4"></i>
+        <span>تصفح العقارات الآن</span>
+      </a>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="favorites-grid">
+      <!-- Populated via script -->
+    </div>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-navy-950 text-slate-300 pt-16 pb-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+      © 2026 صرح مصر للعقارات. جميع الحقوق محفوظة ومسجلة قانونياً.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function renderFavoritesPage() {
+      const favIds = window.DataStore ? window.DataStore.getFavorites() : [];
+      const allProps = window.DataStore ? window.DataStore.getProperties() : [];
+      const favProps = allProps.filter(p => favIds.includes(p.id));
+
+      const countEl = document.getElementById('fav-page-count');
+      if (countEl) countEl.innerText = `${favProps.length} عقار`;
+
+      const grid = document.getElementById('favorites-grid');
+      const emptyState = document.getElementById('fav-empty-state');
+
+      if (favProps.length === 0) {
+        if (grid) grid.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
+      } else {
+        if (emptyState) emptyState.classList.add('hidden');
+        if (grid) grid.innerHTML = favProps.map(createPropertyCardHtml).join('');
+      }
+
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function clearAllFavorites() {
+      if (confirm("هل أنت متأكد من تفريغ كافة العقارات المحفوظة في المفضلة؟")) {
+        localStorage.removeItem('sarh_favorites');
+        updateFavoritesBadge();
+        renderFavoritesPage();
+        showToast("تم تفريغ قائمة المفضلة", "info");
+      }
+    }
+
+    window.onFavoritesUpdated = renderFavoritesPage;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFavoritesPage();
+    });
+  </script>
+</body>
+</html>

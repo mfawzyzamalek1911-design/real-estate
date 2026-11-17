@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تصفح العقارات المتاحة | صَرح مصر</title>
+  
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            tajawal: ['Tajawal', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            navy: {
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#020617',
+            },
+            gold: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-700 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5 text-gold-400 font-semibold">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          عروض استثنائية في العاصمة الإدارية والتجمع الخامس
+        </span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:flex items-center gap-1 text-slate-400">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-500"></i>
+          عقارات مفحوصة وموثقة 100%
+        </span>
+      </div>
+      <div class="flex items-center gap-5 text-slate-400">
+        <a href="tel:19955" class="hover:text-white transition flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-500"></i>
+          <span>الخط الساخن: <strong class="text-white font-mono">19955</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Right side: Logo & Navigation Links (RTL) -->
+        <div class="flex items-center gap-8">
+          <!-- Brand Logo -->
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-900 via-brand-800 to-navy-900 flex items-center justify-center text-gold-500 shadow-md shadow-brand-950/20 group-hover:scale-105 transition-transform duration-200">
+              <i data-lucide="building-2" class="w-6 h-6 stroke-[2.2]"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-black text-navy-900 tracking-tight flex items-center gap-1">
+                صَرح <span class="text-gold-600 font-light text-xl">مصر</span>
+              </span>
+              <span class="text-[11px] font-semibold text-slate-500 tracking-wider -mt-1">منصة العقارات الفاخرة</span>
+            </div>
+          </a>
+
+          <!-- Nav Links (Desktop) -->
+          <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold text-slate-700">
+            <a href="index.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">الرئيسية</a>
+            <a href="properties.html?type=للبيع" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للبيع</a>
+            <a href="properties.html?type=للإيجار" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للإيجار</a>
+            <a href="properties.html" class="px-3.5 py-2 rounded-xl text-brand-900 bg-brand-50 hover:bg-brand-100 transition font-bold">كل العقارات</a>
+            <a href="calculator.html" class="px-3.5 py-2 rounded-xl text-gold-700 bg-gold-50 hover:bg-gold-100 border border-gold-200/60 font-bold transition flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-4 h-4 text-gold-600"></i>
+              <span>حاسبة التمويل</span>
+            </a>
+            <a href="contact.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">تواصل معنا</a>
+          </nav>
+        </div>
+
+        <!-- Left side: CTA & Favorites -->
+        <div class="flex items-center gap-3">
+          <a href="favorites.html" class="relative p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:text-red-500 hover:border-red-200 hover:bg-red-50 transition" title="العقارات المفضلة">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+            <span class="absolute -top-1.5 -left-1.5 bg-red-500 text-white font-bold text-[11px] w-5 h-5 rounded-full flex items-center justify-center hidden" id="fav-count-pill">0</span>
+          </a>
+
+          <a href="add-property.html" class="flex items-center gap-2 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-700 text-white px-5 py-2.5 rounded-xl font-bold shadow-md shadow-gold-600/25 transition">
+            <i data-lucide="plus-circle" class="w-5 h-5"></i>
+            <span>أضف عقارك مجاناً</span>
+          </a>
+
+          <button id="mobile-nav-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-slate-200 bg-white px-4 py-4 space-y-2 shadow-lg">
+      <a href="index.html" class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">الرئيسية</a>
+      <a href="properties.html?type=للبيع" class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">شقق للبيع</a>
+      <a href="properties.html?type=للإيجار" class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">شقق للإيجار</a>
+      <a href="properties.html" class="block px-3 py-2 rounded-xl font-bold text-brand-900 bg-brand-50">كل العقارات</a>
+      <a href="calculator.html" class="block px-3 py-2 rounded-xl text-gold-700 font-semibold hover:bg-gold-50">حاسبة التمويل العقاري</a>
+      <a href="favorites.html" class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">العقارات المفضلة</a>
+      <a href="add-property.html" class="block px-3 py-2 rounded-xl text-brand-800 font-bold bg-brand-50/50">أضف عقارك مجاناً</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">تواصل معنا</a>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="bg-gradient-to-b from-slate-100 to-transparent py-10 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-2xl sm:text-4xl font-black text-navy-900">سوق العقارات والشقق المتاحة</h1>
+          <p class="text-slate-500 text-sm mt-1">تصفح وقارن بين أرقى الوحدات السكنية والاستثمارية في مصر مع فلاتر دقيقة</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="toggleFavoritesOnly()" class="px-4 py-2.5 rounded-xl border border-slate-300 bg-white hover:border-red-400 hover:text-red-500 font-bold text-xs flex items-center gap-1.5 transition shadow-xs">
+            <i data-lucide="heart" class="w-4 h-4 text-red-500"></i>
+            <span>تصفية المفضلة فقط</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search & Filter Controls Card -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4 z-20 w-full mb-10">
+    <div class="bg-white rounded-3xl shadow-lg border border-slate-200/90 p-5 sm:p-7">
+      
+      <!-- Top Row: Tabs and Reset -->
+      <div class="flex items-center justify-between flex-wrap gap-4 border-b border-slate-100 pb-5 mb-5">
+        <div class="flex items-center bg-slate-100 p-1.5 rounded-2xl">
+          <button id="tab-all" class="type-tab active px-5 py-2 rounded-xl text-sm font-bold transition text-navy-900 bg-white shadow-sm" onclick="setFilterType('all')">الكل</button>
+          <button id="tab-sale" class="type-tab px-5 py-2 rounded-xl text-sm font-bold transition text-slate-600 hover:text-navy-900" onclick="setFilterType('sale')">للبيع</button>
+          <button id="tab-rent" class="type-tab px-5 py-2 rounded-xl text-sm font-bold transition text-slate-600 hover:text-navy-900" onclick="setFilterType('rent')">للإيجار</button>
+        </div>
+
+        <button onclick="resetAllFilters()" class="flex items-center gap-1.5 text-slate-500 hover:text-red-600 font-semibold text-xs px-3 py-1.5 rounded-lg hover:bg-red-50 transition">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+          <span>إعادة ضبط جميع الفلاتر</span>
+        </button>
+      </div>
+
+      <!-- Filters Inputs Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        
+        <!-- 1. Location -->
+        <div class="space-y-1.5">
+          <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-brand-700"></i>
+            <span>المنطقة / الحي</span>
+          </label>
+          <select id="filter-location" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700 transition">
+            <option value="all">كل المناطق في مصر</option>
+            <option value="التجمع الخامس">التجمع الخامس</option>
+            <option value="الشيخ زايد">الشيخ زايد</option>
+            <option value="العاصمة الإدارية">العاصمة الإدارية</option>
+            <option value="المعادي">المعادي</option>
+            <option value="مدينة نصر">مدينة نصر</option>
+            <option value="مصر الجديدة">مصر الجديدة</option>
+          </select>
+        </div>
+
+        <!-- 2. Category -->
+        <div class="space-y-1.5">
+          <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+            <i data-lucide="home" class="w-4 h-4 text-brand-700"></i>
+            <span>نوع الوحدة</span>
+          </label>
+          <select id="filter-category" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700 transition">
+            <option value="all">جميع الأنواع</option>
+            <option value="شقة">شقة سكنية</option>
+            <option value="بنتهاوس">بنتهاوس مع روف</option>
+            <option value="دوبلكس">دوبلكس بحديقة</option>
+            <option value="استوديو">استوديو مودرن</option>
+          </select>
+        </div>
+
+        <!-- 3. Price Range -->
+        <div class="space-y-1.5 sm:col-span-2">
+          <label class="text-xs font-bold text-slate-700 flex items-center justify-between">
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="coins" class="w-4 h-4 text-gold-600"></i>
+              <span>نطاق السعر (ج.م)</span>
+            </span>
+            <span class="text-[10px] text-red-500 hidden font-bold" id="price-validation-error">الحد الأدنى أكبر من الأقصى!</span>
+          </label>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="number" id="filter-min-price" placeholder="الحد الأدنى" oninput="validateAndApplyFilters()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs sm:text-sm font-mono text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700">
+            <input type="number" id="filter-max-price" placeholder="الحد الأقصى" oninput="validateAndApplyFilters()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs sm:text-sm font-mono text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700">
+          </div>
+        </div>
+
+        <!-- 4. Bedrooms -->
+        <div class="space-y-1.5">
+          <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+            <i data-lucide="bed" class="w-4 h-4 text-brand-700"></i>
+            <span>عدد الغرف</span>
+          </label>
+          <select id="filter-bedrooms" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700 transition">
+            <option value="all">أي عدد غرف</option>
+            <option value="1">غرفة (استوديو)</option>
+            <option value="2">غرفتان (2)</option>
+            <option value="3">3 غرف نوم</option>
+            <option value="4+">4 غرف أو أكثر</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- Active Chips Row -->
+      <div class="flex flex-wrap items-center gap-2 pt-4 mt-4 border-t border-slate-100 text-xs" id="active-filter-chips">
+        <span class="text-slate-400 font-semibold flex items-center gap-1">
+          <i data-lucide="filter" class="w-3.5 h-3.5"></i>
+          الفلاتر النشطة:
+        </span>
+        <div class="flex flex-wrap items-center gap-2" id="chips-container">
+          <span class="text-slate-400 italic">عرض جميع العقارات المتاحة</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Catalog Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 flex-1 w-full">
+    
+    <!-- Sort & Counter Bar -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 bg-white p-4 rounded-2xl border border-slate-200/80">
+      <div class="flex items-center gap-3">
+        <span class="font-bold text-navy-900 text-sm">النتائج المتاحة:</span>
+        <span class="bg-brand-100 text-brand-900 text-xs font-black px-3 py-1 rounded-full font-mono" id="results-count">8 عقار</span>
+      </div>
+
+      <div class="flex items-center gap-2 self-end sm:self-center">
+        <label class="text-xs text-slate-500 font-semibold">ترتيب حسب:</label>
+        <select id="sort-select" class="bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold rounded-xl px-3 py-2 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700">
+          <option value="featured">العقارات المميزة أولاً</option>
+          <option value="price-asc">السعر: من الأقل للأعلى</option>
+          <option value="price-desc">السعر: من الأعلى للأقل</option>
+          <option value="area-desc">المساحة: الأكبر أولاً</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="hidden py-16 text-center bg-white rounded-3xl border border-dashed border-slate-300 p-8 max-w-xl mx-auto space-y-4">
+      <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mx-auto">
+        <i data-lucide="search-x" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-xl font-bold text-navy-900">لم نعثر على عقارات تطابق هذه المعايير</h3>
+      <p class="text-xs text-slate-500">جرب تعديل نطاق السعر أو تغيير المنطقة وعدد الغرف لعرض المزيد من الوحدات.</p>
+      <button onclick="resetAllFilters()" class="bg-brand-900 text-white text-xs font-bold px-5 py-2.5 rounded-xl hover:bg-brand-800 transition">
+        إعادة ضبط الفلاتر وعرض الكل
+      </button>
+    </div>
+
+    <!-- Grid of Properties -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="listings-grid">
+      <!-- Populated dynamically via properties.js -->
+    </div>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-navy-950 text-slate-300 pt-16 pb-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-800 flex items-center justify-center text-gold-400">
+              <i data-lucide="building-2" class="w-5 h-5 stroke-[2.2]"></i>
+            </div>
+            <span class="text-2xl font-black text-white">صَرح <span class="text-gold-500 font-light">مصر</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            البوابة العقارية الموثوقة الأولى في مصر لتصفح آلاف الشقق والفيلات مباشرة من المالك والمطورين.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">روابط سريعة</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><a href="index.html" class="hover:text-gold-400 transition">الصفحة الرئيسية</a></li>
+            <li><a href="calculator.html" class="hover:text-gold-400 transition">حاسبة التمويل العقاري</a></li>
+            <li><a href="add-property.html" class="hover:text-gold-400 transition">أضف عقارك مجاناً</a></li>
+            <li><a href="favorites.html" class="hover:text-gold-400 transition">قائمة المفضلة</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">أشهر المناطق</h4>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li><button onclick="currentFilters.location='التجمع الخامس'; syncControlsWithState(); applyFiltersAndRender();" class="hover:text-gold-400 transition">التجمع الخامس</button></li>
+            <li><button onclick="currentFilters.location='الشيخ زايد'; syncControlsWithState(); applyFiltersAndRender();" class="hover:text-gold-400 transition">الشيخ زايد</button></li>
+            <li><button onclick="currentFilters.location='العاصمة الإدارية'; syncControlsWithState(); applyFiltersAndRender();" class="hover:text-gold-400 transition">العاصمة الإدارية</button></li>
+            <li><button onclick="currentFilters.location='المعادي'; syncControlsWithState(); applyFiltersAndRender();" class="hover:text-gold-400 transition">المعادي</button></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">تواصل معنا</h4>
+          <p class="text-xs text-slate-400">الخط الساخن: 19955</p>
+          <p class="text-xs text-slate-400 mt-1">البريد: info@sarhegypt.com</p>
+          <p class="text-xs text-slate-400 mt-1">شارع التسعين الشمالي، القاهرة الجديدة</p>
+        </div>
+      </div>
+      <div class="pt-8 text-center text-xs text-slate-500">
+        © 2026 صرح مصر للعقارات. جميع الحقوق محفوظة ومسجلة قانونياً.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/properties.js"></script>
+</body>
+</html>

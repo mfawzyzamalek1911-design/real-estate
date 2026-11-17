@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محمود للتسويق العقاري </title>
+
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            tajawal: ['Tajawal', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            navy: {
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#020617',
+            },
+            gold: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-700 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5 text-gold-400 font-semibold">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          عروض استثنائية في العاصمة الإدارية والتجمع الخامس
+        </span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:flex items-center gap-1 text-slate-400">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-500"></i>
+          عقارات مفحوصة وموثقة 100%
+        </span>
+      </div>
+      <div class="flex items-center gap-5 text-slate-400">
+        <a href="tel:19955" class="hover:text-white transition flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-500"></i>
+          <span>الخط الساخن: <strong class="text-white font-mono">19955</strong></span>
+        </a>
+        <span class="text-slate-700">|</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-emerald-400 font-medium">سوق العقارات نشط الآن</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navbar -->
+  <header
+    class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Right side: Logo & Navigation Links (RTL) -->
+        <div class="flex items-center gap-8">
+          <!-- Brand Logo -->
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div
+              class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-900 via-brand-800 to-navy-900 flex items-center justify-center text-gold-500 shadow-md shadow-brand-950/20 group-hover:scale-105 transition-transform duration-200">
+              <i data-lucide="building-2" class="w-6 h-6 stroke-[2.2]"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-black text-navy-900 tracking-tight flex items-center gap-1">
+                محمود<span class="text-gold-600 font-light text-xl">للعقارات</span>
+              </span>
+              <span class="text-[11px] font-semibold text-slate-500 tracking-wider -mt-1">منصة العقارات الفاخرة</span>
+            </div>
+          </a>
+
+          <!-- Nav Links (Desktop) -->
+          <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold text-slate-700">
+            <a href="index.html"
+              class="px-3.5 py-2 rounded-xl text-brand-900 bg-brand-50 hover:bg-brand-100 transition font-bold">الرئيسية</a>
+            <a href="properties.html?type=للبيع"
+              class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للبيع</a>
+            <a href="properties.html?type=للإيجار"
+              class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للإيجار</a>
+            <a href="properties.html"
+              class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">كل العقارات</a>
+            <a href="calculator.html"
+              class="px-3.5 py-2 rounded-xl text-gold-700 bg-gold-50 hover:bg-gold-100 border border-gold-200/60 font-bold transition flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-4 h-4 text-gold-600"></i>
+              <span>حاسبة التمويل</span>
+            </a>
+            <a href="contact.html"
+              class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">تواصل معنا</a>
+          </nav>
+        </div>
+
+        <!-- Left side: CTA & Favorites & Mobile Menu Trigger (RTL) -->
+        <div class="flex items-center gap-3">
+          <!-- Saved Favorites Button -->
+          <a href="favorites.html"
+            class="relative p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:text-red-500 hover:border-red-200 hover:bg-red-50 transition"
+            title="العقارات المفضلة">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+            <span
+              class="absolute -top-1.5 -left-1.5 bg-red-500 text-white font-bold text-[11px] w-5 h-5 rounded-full flex items-center justify-center hidden"
+              id="fav-count-pill">0</span>
+          </a>
+
+          <!-- Add Property Button -->
+          <a href="add-property.html"
+            class="flex items-center gap-2 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-700 hover:to-gold-600 text-white px-5 py-2.5 rounded-xl font-bold shadow-md shadow-gold-600/25 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition duration-200">
+            <i data-lucide="plus-circle" class="w-5 h-5"></i>
+            <span>أضف عقارك مجاناً</span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-nav-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer / Dropdown -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-slate-200 bg-white px-4 py-4 space-y-2 shadow-lg">
+      <a href="index.html" class="block px-3 py-2 rounded-xl font-bold text-brand-900 bg-brand-50">الرئيسية</a>
+      <a href="properties.html?type=للبيع"
+        class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">شقق للبيع</a>
+      <a href="properties.html?type=للإيجار"
+        class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">شقق للإيجار</a>
+      <a href="properties.html" class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">كل
+        العقارات</a>
+      <a href="calculator.html" class="block px-3 py-2 rounded-xl text-gold-700 font-semibold hover:bg-gold-50">حاسبة
+        التمويل العقاري</a>
+      <a href="favorites.html"
+        class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">العقارات المفضلة</a>
+      <a href="add-property.html" class="block px-3 py-2 rounded-xl text-brand-800 font-bold bg-brand-50/50">أضف عقارك
+        مجاناً</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-xl text-slate-700 font-semibold hover:bg-slate-50">تواصل
+        معنا</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative hero-bg py-20 lg:py-28 text-white px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto text-center space-y-6">
+
+      <!-- Tag badge -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-blur text-gold-400 border border-gold-500/30 text-xs sm:text-sm font-semibold tracking-wide">
+        <i data-lucide="badge-percent" class="w-4 h-4"></i>
+        <span>أكثر من 15,000 عقار سكني واستثماري موثق في مصر</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-white">
+        ابحث عن <span
+          class="text-transparent bg-clip-text bg-gradient-to-l from-gold-400 via-gold-300 to-amber-200">بيتك
+          المستقبلي</span> في أرقى أحياء مصر
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
+        شقق وفلل فاخرة في التجمع الخامس، الشيخ زايد، العاصمة الإدارية الجديدة، والمعادي بأسعار مباشرة من المالك
+        والمطورين المعتمدين بدون عمولات خفية.
+      </p>
+
+      <!-- Key Quick Stats -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto pt-4 text-slate-200">
+        <div class="badge-blur p-4 rounded-2xl border border-white/10">
+          <div class="text-2xl sm:text-3xl font-black text-gold-400 font-mono">+1,200</div>
+          <div class="text-xs text-slate-300 mt-1">عقار تم بيعه مؤخراً</div>
+        </div>
+        <div class="badge-blur p-4 rounded-2xl border border-white/10">
+          <div class="text-2xl sm:text-3xl font-black text-white font-mono">0%</div>
+          <div class="text-xs text-slate-300 mt-1">عمولة على المشترين</div>
+        </div>
+        <div class="badge-blur p-4 rounded-2xl border border-white/10">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">24/7</div>
+          <div class="text-xs text-slate-300 mt-1">دعم واستشارات مجانية</div>
+        </div>
+        <div class="badge-blur p-4 rounded-2xl border border-white/10">
+          <div class="text-2xl sm:text-3xl font-black text-gold-400 font-mono">100%</div>
+          <div class="text-xs text-slate-300 mt-1">فحص قانوني للعقارات</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Floating Search Bar & Multi-Filter -->
+  <section class="relative -mt-10 sm:-mt-14 z-30 max-w-6xl mx-auto px-4 sm:px-6 w-full">
+    <div class="bg-white rounded-3xl shadow-xl shadow-slate-900/10 border border-slate-200/90 p-5 sm:p-7">
+      <form id="hero-search-form" onsubmit="handleHeroSearch(event)">
+        <!-- Type Tabs -->
+        <div class="flex items-center justify-between flex-wrap gap-4 border-b border-slate-100 pb-5 mb-5">
+          <div class="flex items-center bg-slate-100 p-1.5 rounded-2xl">
+            <button type="button"
+              class="tab-btn active px-5 py-2 rounded-xl text-sm font-bold transition text-navy-900 bg-white shadow-sm"
+              onclick="setHeroTab('all', this)">الكل</button>
+            <button type="button"
+              class="tab-btn px-5 py-2 rounded-xl text-sm font-bold transition text-slate-600 hover:text-navy-900"
+              onclick="setHeroTab('للبيع', this)">للبيع</button>
+            <button type="button"
+              class="tab-btn px-5 py-2 rounded-xl text-sm font-bold transition text-slate-600 hover:text-navy-900"
+              onclick="setHeroTab('للإيجار', this)">للإيجار</button>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <i data-lucide="shield-alert" class="w-4 h-4 text-emerald-600"></i>
+            <span>تحديث يومي للأسعار والوحدات المتاحة</span>
+          </div>
+        </div>
+
+        <!-- Filters Grid Inputs -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- 1. Location -->
+          <div class="space-y-1.5">
+            <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-700"></i>
+              <span>المكان / المنطقة</span>
+            </label>
+            <select id="hero-location"
+              class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700 transition">
+              <option value="all">كل المناطق في مصر</option>
+              <option value="التجمع الخامس">التجمع الخامس (القاهرة الجديدة)</option>
+              <option value="الشيخ زايد">الشيخ زايد (أكتوبر)</option>
+              <option value="العاصمة الإدارية">العاصمة الإدارية الجديدة</option>
+              <option value="المعادي">المعادي (دجلة والسرايات)</option>
+              <option value="مدينة نصر">مدينة نصر</option>
+              <option value="مصر الجديدة">مصر الجديدة (هليوبوليس)</option>
+            </select>
+          </div>
+
+          <!-- 2. Price Range -->
+          <div class="space-y-1.5">
+            <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <i data-lucide="coins" class="w-4 h-4 text-gold-600"></i>
+              <span>نطاق السعر (ج.م)</span>
+            </label>
+            <div class="grid grid-cols-2 gap-2">
+              <input type="number" id="hero-min-price" placeholder="الحد الأدنى"
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-2.5 py-2 text-xs sm:text-sm font-mono text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700">
+              <input type="number" id="hero-max-price" placeholder="الحد الأقصى"
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-2.5 py-2 text-xs sm:text-sm font-mono text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700">
+            </div>
+          </div>
+
+          <!-- 3. Bedrooms -->
+          <div class="space-y-1.5">
+            <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <i data-lucide="bed" class="w-4 h-4 text-brand-700"></i>
+              <span>عدد الغرف</span>
+            </label>
+            <select id="hero-bedrooms"
+              class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700 transition">
+              <option value="all">أي عدد غرف</option>
+              <option value="1">غرفة واحدة (استوديو)</option>
+              <option value="2">غرفتان (2)</option>
+              <option value="3">3 غرف نوم</option>
+              <option value="4+">4 غرف أو أكثر (4+)</option>
+            </select>
+          </div>
+
+          <!-- 4. Submit Search -->
+          <div class="flex flex-col justify-end space-y-1.5">
+            <label class="hidden lg:block text-xs font-bold opacity-0">بحث</label>
+            <button type="submit"
+              class="w-full bg-brand-900 hover:bg-brand-800 text-white font-bold py-2.5 px-4 rounded-xl shadow-md hover:shadow-lg flex items-center justify-center gap-2 transition duration-200">
+              <i data-lucide="search" class="w-4 h-4 text-gold-400"></i>
+              <span>تطبيق البحث</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Featured Listings Section -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-1 w-full" id="featured-listings">
+    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <h2 class="text-2xl sm:text-3xl font-black text-navy-900">عقارات وشقق مميزة</h2>
+          <span class="bg-brand-100 text-brand-900 text-xs font-black px-3 py-1 rounded-full font-mono"
+            id="featured-count">8 عقار</span>
+        </div>
+        <p class="text-slate-500 text-sm mt-1">تصفح أحدث الوحدات الموثوقة مع بيانات دقيقة وتواصل مباشر</p>
+      </div>
+
+      <a href="properties.html"
+        class="flex items-center gap-2 text-brand-900 hover:text-brand-700 font-bold text-sm bg-white border border-slate-200 hover:border-slate-300 px-4 py-2 rounded-xl shadow-xs transition">
+        <span>عرض جميع العقارات المتاحة</span>
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+      </a>
+    </div>
+
+    <!-- Listings Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="home-listings-grid">
+      <!-- Populated via script -->
+    </div>
+  </main>
+
+  <!-- Smart Mortgage Calculator Section -->
+  <section class="py-16 bg-white border-t border-slate-200 scroll-mt-20" id="mortgage-preview-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span
+          class="text-xs font-bold text-gold-600 bg-gold-50 px-3 py-1 rounded-full border border-gold-200 inline-block mb-3">
+          مبادرات البنك المركزي المصري والتمويل البنكي
+        </span>
+        <h2 class="text-3xl font-black text-navy-900">حاسبة التمويل العقاري الذكية</h2>
+        <p class="text-slate-500 text-sm mt-2">احسب قسطك الشهري والمقدم المطلوب بدقة وفق أنظمة البنوك المصرية ومبادرات
+          البنك المركزي</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Left: Results Card -->
+        <div
+          class="lg:col-span-5 bg-navy-950 text-white rounded-3xl p-6 sm:p-8 shadow-xl border border-slate-800 space-y-6">
+          <div class="border-b border-slate-800 pb-5">
+            <span class="text-xs text-slate-400 block mb-1">نتيجة الحساب التقديري</span>
+            <div class="flex items-baseline gap-2">
+              <span class="text-3xl sm:text-4xl font-black text-white font-mono tracking-tight"
+                id="mc-result-monthly">23,420</span>
+              <span class="text-gold-400 font-bold text-sm">ج.م / شهرياً</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2 flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>الحد الأدنى للدخل الشهري المطلوب: <strong class="text-white font-mono" id="mc-result-income">58,550
+                  ج.م</strong></span>
+            </p>
+          </div>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+              <span class="text-slate-400">سعر العقار الأساسي:</span>
+              <span class="font-mono font-bold text-white" id="mc-result-price">3,500,000 ج.م</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+              <span class="text-slate-400">الدفعة المقدمة المدفوعة:</span>
+              <span class="font-mono font-bold text-gold-400" id="mc-result-down">700,000 ج.م</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+              <span class="text-slate-400">مبلغ التمويل المقترض:</span>
+              <span class="font-mono font-bold text-white" id="mc-result-principal">2,800,000 ج.م</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+              <span class="text-slate-400">إجمالي الفوائد البنكية:</span>
+              <span class="font-mono font-bold text-emerald-400" id="mc-result-interest">2,820,560 ج.م</span>
+            </div>
+            <div class="flex justify-between py-2 bg-slate-900/80 px-3 rounded-xl">
+              <span class="text-gold-400 font-bold">إجمالي السداد الكلي (أصل + فوائد):</span>
+              <span class="font-mono font-bold text-gold-300 text-sm" id="mc-result-total">5,620,560 ج.م</span>
+            </div>
+          </div>
+
+          <!-- Distribution Bar -->
+          <div class="space-y-1.5">
+            <div class="flex justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1.5"><span
+                  class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span> أصل القرض (<span
+                  id="mc-bar-principal-pct">50%</span>)</span>
+              <span class="flex items-center gap-1.5"><span
+                  class="w-2.5 h-2.5 rounded-full bg-gold-500 inline-block"></span> إجمالي الفوائد (<span
+                  id="mc-bar-interest-pct">50%</span>)</span>
+            </div>
+            <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden flex">
+              <div id="mc-bar-principal" class="bg-emerald-500 h-full transition-all duration-300" style="width: 50%;">
+              </div>
+              <div id="mc-bar-interest" class="bg-gold-500 h-full transition-all duration-300" style="width: 50%;">
+              </div>
+            </div>
+          </div>
+
+          <!-- Action buttons -->
+          <div class="space-y-2.5 pt-2">
+            <button onclick="applyMortgageToProperties()"
+              class="w-full bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-700 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-gold-600/20 transition">
+              <i data-lucide="filter" class="w-4 h-4"></i>
+              <span>تصفية العقارات المناسبة لهذا القسط</span>
+            </button>
+            <a href="calculator.html"
+              class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 border border-slate-700 text-xs transition">
+              <span>فتح الحاسبة المتكاملة المتقدمة</span>
+              <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Inputs Form -->
+        <div class="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200/90 space-y-6">
+
+          <!-- Price Slider & Input -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                <i data-lucide="banknote" class="w-4 h-4 text-brand-700"></i>
+                <span>سعر العقار الإجمالي</span>
+              </label>
+              <div class="flex items-center gap-1 bg-white px-3 py-1.5 rounded-xl border border-slate-200">
+                <input type="number" id="mc-price-input" value="3500000" min="300000" max="20000000" step="50000"
+                  oninput="updatePrice(this.value)"
+                  class="font-mono font-bold text-brand-900 text-sm focus:outline-none w-28 text-left" dir="ltr">
+                <span class="text-xs text-slate-500">ج.م</span>
+              </div>
+            </div>
+            <input type="range" id="mc-price-slider" min="300000" max="20000000" step="50000" value="3500000"
+              oninput="updatePrice(this.value)" class="w-full h-2 bg-slate-200 rounded-lg cursor-pointer">
+            <div class="flex justify-between text-[11px] text-slate-400 font-mono">
+              <span>300,000 ج.م</span>
+              <span>10,000,000 ج.م</span>
+              <span>20,000,000 ج.م</span>
+            </div>
+          </div>
+
+          <!-- Down Payment -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                <i data-lucide="pie-chart" class="w-4 h-4 text-gold-600"></i>
+                <span>الدفعة المقدمة</span>
+                <span class="text-xs text-slate-500" id="mc-down-percent-label">(20% من السعر)</span>
+              </label>
+              <div class="flex items-center gap-1 bg-white px-3 py-1.5 rounded-xl border border-slate-200">
+                <input type="number" id="mc-down-input" value="700000" min="0" step="10000"
+                  oninput="updateFromDownInput(this.value)"
+                  class="font-mono font-bold text-gold-600 text-sm focus:outline-none w-28 text-left" dir="ltr">
+                <span class="text-xs text-slate-500">ج.م</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="setDownPercent(15)"
+                class="mc-down-btn text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:border-brand-700 transition">15%</button>
+              <button type="button" onclick="setDownPercent(20)"
+                class="mc-down-btn text-xs font-bold px-3 py-1.5 rounded-lg border border-brand-700 bg-brand-900 text-white shadow-xs transition">20%</button>
+              <button type="button" onclick="setDownPercent(30)"
+                class="mc-down-btn text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:border-brand-700 transition">30%</button>
+              <button type="button" onclick="setDownPercent(50)"
+                class="mc-down-btn text-xs font-bold px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:border-brand-700 transition">50%</button>
+            </div>
+            <input type="range" id="mc-down-slider" min="10" max="80" step="1" value="20"
+              oninput="updateDownSlider(this.value)" class="w-full h-2 bg-slate-200 rounded-lg cursor-pointer">
+          </div>
+
+          <!-- Repayment Years -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                <i data-lucide="calendar" class="w-4 h-4 text-brand-700"></i>
+                <span>مدة السداد (السنوات)</span>
+              </label>
+              <span id="mc-years-display"
+                class="font-mono font-bold text-brand-900 text-sm bg-white px-3 py-1 rounded-xl border border-slate-200">20
+                سنة (240 شهراً)</span>
+            </div>
+            <div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
+              <button type="button" onclick="setLoanYears(5)"
+                class="mc-years-btn text-xs font-bold py-2 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">5
+                سنوات</button>
+              <button type="button" onclick="setLoanYears(10)"
+                class="mc-years-btn text-xs font-bold py-2 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">10
+                سنوات</button>
+              <button type="button" onclick="setLoanYears(15)"
+                class="mc-years-btn text-xs font-bold py-2 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">15
+                سنة</button>
+              <button type="button" onclick="setLoanYears(20)"
+                class="mc-years-btn text-xs font-bold py-2 rounded-xl border border-brand-700 bg-brand-900 text-white shadow-xs transition">20
+                سنة</button>
+              <button type="button" onclick="setLoanYears(25)"
+                class="mc-years-btn text-xs font-bold py-2 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">25
+                سنة</button>
+              <button type="button" onclick="setLoanYears(30)"
+                class="mc-years-btn text-xs font-bold py-2 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">30
+                سنة</button>
+            </div>
+          </div>
+
+          <!-- Interest Rate Presets -->
+          <div class="space-y-2">
+            <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <i data-lucide="percent" class="w-4 h-4 text-gold-600"></i>
+              <span>الفائدة السنوية المتناقصة</span>
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <button type="button" data-rate="3" onclick="setInterestPreset(3)"
+                class="mc-rate-btn text-right p-2.5 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">
+                <span class="block text-xs font-bold text-brand-900">مبادرة 3%</span>
+                <span class="text-[10px] text-slate-400">محدودي ومتوسطي الدخل</span>
+              </button>
+              <button type="button" data-rate="8" onclick="setInterestPreset(8)"
+                class="mc-rate-btn text-right p-2.5 rounded-xl border-2 border-brand-700 bg-brand-50/90 shadow-xs transition">
+                <span class="block text-xs font-bold text-brand-900">مبادرة 8%</span>
+                <span class="text-[10px] text-emerald-700 font-bold">شقق الإسكان ومتوسطي الدخل</span>
+              </button>
+              <button type="button" data-rate="16" onclick="setInterestPreset(16)"
+                class="mc-rate-btn text-right p-2.5 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">
+                <span class="block text-xs font-bold text-navy-900">تمويل تجاري 16%</span>
+                <span class="text-[10px] text-slate-400">بنوك تجارية بدون قيود المبادرة</span>
+              </button>
+              <div class="bg-white p-2 rounded-xl border border-slate-200 flex flex-col justify-center">
+                <span class="text-[10px] text-slate-400 mb-0.5">معدل مخصص:</span>
+                <div class="flex items-center gap-1">
+                  <input type="number" id="mc-rate-input" value="8" min="1" max="30" step="0.5"
+                    oninput="updateFromRateInput(this.value)"
+                    class="w-12 font-mono font-bold text-xs text-navy-900 focus:outline-none">
+                  <span class="text-xs text-slate-500">%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Investment Locations Section -->
+  <section class="bg-slate-100/80 py-16 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span
+          class="text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1 rounded-full border border-brand-200 inline-block mb-3">
+          دليل الاستثمار في مصر
+        </span>
+        <h2 class="text-3xl font-black text-navy-900">استكشف أهم المناطق السكنية والاستثمارية</h2>
+        <p class="text-slate-500 text-sm mt-2">نقدم لك تحليلاً دقيقاً لمتوسط أسعار المتر والعوائد الاستثمارية المتوقعة
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="locations-grid">
+        <!-- Populated via script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Sarh Egypt Section -->
+  <section class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-900 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-black text-navy-900 text-lg">فحص قانوني موثق 100%</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            كل وحدة عقارية تمر بمراجعة شاملة لتراخيص البناء وصحة توقيع الشهر العقاري لضمان سلامة استثمارك.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-gold-100 text-gold-700 flex items-center justify-center">
+            <i data-lucide="badge-percent" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-black text-navy-900 text-lg">بدون عمولة على المشترين</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            نوفر لك إمكانية التواصل المباشر مع أصحاب العقارات والمطورين المعتمدين بدون أي رسوم وساطة إضافية.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 space-y-3">
+          <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-800 flex items-center justify-center">
+            <i data-lucide="headset" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-black text-navy-900 text-lg">استشارات عقارية وتمويلية مجانية</h3>
+          <p class="text-slate-500 text-xs leading-relaxed">
+            فريق من الخبراء جاهز لمساعدتك في اختيار أفضل منطقة سكنية ونظام سداد مناسب لميزانيتك.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-navy-950 text-slate-300 pt-16 pb-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+
+        <!-- Brand Summary -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-800 flex items-center justify-center text-gold-400">
+              <i data-lucide="building-2" class="w-5 h-5 stroke-[2.2]"></i>
+            </div>
+            <span class="text-2xl font-black text-white">محمود <span
+                class="text-gold-500 font-light">للعقارات</span></span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            المنصة الرائدة في الشرق الأوسط ومصر لربط المشترين والمستأجرين بأفضل المطورين والملاك مباشرة، مع ضمان
+            الشفافية والتحقق القانوني الكامل.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400">
+            <a href="#" class="p-2 rounded-lg bg-slate-900 hover:text-white hover:bg-slate-800 transition"><i
+                data-lucide="facebook" class="w-4 h-4"></i></a>
+            <a href="#" class="p-2 rounded-lg bg-slate-900 hover:text-white hover:bg-slate-800 transition"><i
+                data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="#" class="p-2 rounded-lg bg-slate-900 hover:text-white hover:bg-slate-800 transition"><i
+                data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="#" class="p-2 rounded-lg bg-slate-900 hover:text-white hover:bg-slate-800 transition"><i
+                data-lucide="twitter" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">روابط سريعة</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="properties.html?type=للبيع" class="hover:text-gold-400 transition">شقق تمليك في القاهرة</a>
+            </li>
+            <li><a href="properties.html?type=للإيجار" class="hover:text-gold-400 transition">شقق مفروشة للإيجار</a>
+            </li>
+            <li><a href="calculator.html" class="hover:text-gold-400 transition">حاسبة التمويل العقاري المصري</a></li>
+            <li><a href="add-property.html" class="hover:text-gold-400 transition">أضف عقارك مجاناً</a></li>
+            <li><a href="contact.html" class="hover:text-gold-400 transition">تواصل معنا والدعم الفني</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Locations -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-4">أشهر المناطق العقارية</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="properties.html?location=التجمع الخامس" class="hover:text-gold-400 transition">كمبوندات التجمع
+                الخامس (AUC)</a></li>
+            <li><a href="properties.html?location=الشيخ زايد" class="hover:text-gold-400 transition">الشيخ زايد والثورة
+                الخضراء</a></li>
+            <li><a href="properties.html?location=العاصمة الإدارية" class="hover:text-gold-400 transition">الحي السكني
+                R7 بالعاصمة الإدارية</a></li>
+            <li><a href="properties.html?location=المعادي" class="hover:text-gold-400 transition">المعادي دجلة وكورنيش
+                النيل</a></li>
+            <li><a href="properties.html?location=مدينة نصر" class="hover:text-gold-400 transition">عباس العقاد ومكرم
+                عبيد</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact details -->
+        <div class="space-y-3">
+          <h4 class="text-white font-bold text-sm mb-4">المكتب الرئيسي</h4>
+          <p class="text-xs text-slate-400 flex items-start gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4 text-gold-500 shrink-0 mt-0.5"></i>
+            <span>شارع التسعين الشمالي، القطاع الأول، التجمع الخامس، القاهرة، مصر</span>
+          </p>
+          <p class="text-xs text-slate-400 flex items-center gap-2">
+            <i data-lucide="phone" class="w-4 h-4 text-gold-500 shrink-0"></i>
+            <span dir="ltr">+20 2 2810 5000</span>
+          </p>
+          <p class="text-xs text-slate-400 flex items-center gap-2">
+            <i data-lucide="mail" class="w-4 h-4 text-gold-500 shrink-0"></i>
+            <span>info@sarhegypt.com</span>
+          </p>
+          <div class="pt-2">
+            <span
+              class="inline-block px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px] text-emerald-400 font-semibold">
+              سجل تجاري رقم: 492019 القاهرة
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 محمود للعقارات. جميع الحقوق محفوظة ومسجلة قانونياً.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-slate-300">الشروط والأحكام</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300">سياسة الخصوصية</a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300">ميثاق الوساطة المعتمدة</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calculator.js"></script>
+  <script>
+    let selectedHeroTab = 'all';
+
+    function setHeroTab(type, btn) {
+      selectedHeroTab = type;
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.className = 'tab-btn px-5 py-2 rounded-xl text-sm font-bold transition text-slate-600 hover:text-navy-900';
+      });
+      btn.className = 'tab-btn active px-5 py-2 rounded-xl text-sm font-bold transition text-navy-900 bg-white shadow-sm';
+    }
+
+    function handleHeroSearch(e) {
+      e.preventDefault();
+      const loc = document.getElementById('hero-location').value;
+      const minP = document.getElementById('hero-min-price').value;
+      const maxP = document.getElementById('hero-max-price').value;
+      const beds = document.getElementById('hero-bedrooms').value;
+
+      const params = new URLSearchParams();
+      if (selectedHeroTab !== 'all') params.set('type', selectedHeroTab);
+      if (loc !== 'all') params.set('location', loc);
+      if (minP) params.set('minPrice', minP);
+      if (maxP) params.set('maxPrice', maxP);
+      if (beds !== 'all') params.set('bedrooms', beds);
+
+      window.location.href = `properties.html?${params.toString()}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Render Featured Properties on Home
+      const grid = document.getElementById('home-listings-grid');
+      const properties = window.DataStore.getProperties();
+      if (grid && properties.length > 0) {
+        grid.innerHTML = properties.slice(0, 6).map(createPropertyCardHtml).join('');
+      }
+
+      const countEl = document.getElementById('featured-count');
+      if (countEl) countEl.innerText = `${properties.length} عقار`;
+
+      // 2. Render Locations Cards
+      const locGrid = document.getElementById('locations-grid');
+      if (locGrid && window.LOCATIONS_DATA) {
+        locGrid.innerHTML = window.LOCATIONS_DATA.slice(0, 4).map(loc => `
+          <a href="properties.html?location=${encodeURIComponent(loc.name)}" class="group block bg-white rounded-3xl p-6 border border-slate-200/90 shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-brand-50 text-brand-900 border border-brand-200">${loc.tag}</span>
+              <i data-lucide="arrow-left" class="w-4 h-4 text-slate-400 group-hover:text-brand-900 group-hover:-translate-x-1 transition"></i>
+            </div>
+            <h4 class="text-lg font-black text-navy-900 group-hover:text-brand-900 transition mb-1">${loc.name}</h4>
+            <p class="text-xs text-slate-500 mb-4">${loc.description}</p>
+            <div class="border-t border-slate-100 pt-3 flex justify-between items-center text-xs">
+              <span class="text-slate-400">متوسط سعر المتر:</span>
+              <span class="font-mono font-bold text-gold-600">${new Intl.NumberFormat('ar-EG').format(loc.avgMeterPrice)} ج.م</span>
+            </div>
+          </a>
+        `).join('');
+      }
+
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
+</body>
+
+</html>

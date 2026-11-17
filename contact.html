@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا وفروعنا | صَرح مصر</title>
+  
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            tajawal: ['Tajawal', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            navy: {
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#020617',
+            },
+            gold: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-700 selection:text-white">
+
+  <!-- Sticky Main Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-900 via-brand-800 to-navy-900 flex items-center justify-center text-gold-500 shadow-md shadow-brand-950/20 group-hover:scale-105 transition-transform duration-200">
+              <i data-lucide="building-2" class="w-6 h-6 stroke-[2.2]"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-black text-navy-900 tracking-tight flex items-center gap-1">
+                صَرح <span class="text-gold-600 font-light text-xl">مصر</span>
+              </span>
+              <span class="text-[11px] font-semibold text-slate-500 tracking-wider -mt-1">منصة العقارات الفاخرة</span>
+            </div>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold text-slate-700">
+            <a href="index.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">الرئيسية</a>
+            <a href="properties.html?type=للبيع" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للبيع</a>
+            <a href="properties.html?type=للإيجار" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للإيجار</a>
+            <a href="properties.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">كل العقارات</a>
+            <a href="calculator.html" class="px-3.5 py-2 rounded-xl text-gold-700 bg-gold-50 hover:bg-gold-100 border border-gold-200/60 font-bold transition flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-4 h-4 text-gold-600"></i>
+              <span>حاسبة التمويل</span>
+            </a>
+            <a href="contact.html" class="px-3.5 py-2 rounded-xl text-brand-900 bg-brand-50 hover:bg-brand-100 transition font-bold">تواصل معنا</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="favorites.html" class="relative p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:text-red-500 hover:border-red-200 hover:bg-red-50 transition" title="العقارات المفضلة">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+            <span class="absolute -top-1.5 -left-1.5 bg-red-500 text-white font-bold text-[11px] w-5 h-5 rounded-full flex items-center justify-center hidden" id="fav-count-pill">0</span>
+          </a>
+
+          <a href="add-property.html" class="flex items-center gap-2 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-700 text-white px-5 py-2.5 rounded-xl font-bold shadow-md shadow-gold-600/25 transition">
+            <i data-lucide="plus-circle" class="w-5 h-5"></i>
+            <span>أضف عقارك مجاناً</span>
+          </a>
+
+          <button id="mobile-nav-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <div class="bg-navy-950 text-white py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <div class="max-w-4xl mx-auto text-center space-y-3">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-900/60 text-emerald-400 border border-emerald-500/30 text-xs font-bold">
+        <i data-lucide="headset" class="w-4 h-4"></i>
+        فريق الدعم والاستشارات متاح 24/7
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-black">نسعد بتواصلك مع صَرح مصر</h1>
+      <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
+        سواء كنت مشترياً، مستثمراً، أو صاحب عقار، نحن هنا لمساعدتك في كل خطوة مع المشورة القانونية والمالية.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Grid -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full">
+    
+    <!-- Quick Contact Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-gold-100 text-gold-600 flex items-center justify-center shrink-0">
+          <i data-lucide="phone-call" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs text-slate-400 block">الخط الساخن المباشر</span>
+          <a href="tel:19955" class="text-lg font-black text-navy-900 font-mono hover:text-gold-600">19955</a>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+          <i data-lucide="message-circle" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs text-slate-400 block">محادثة واتساب سريعة</span>
+          <a href="https://wa.me/201099887766" target="_blank" class="text-sm font-black text-navy-900 font-mono hover:text-emerald-600">+20 109 988 7766</a>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-800 flex items-center justify-center shrink-0">
+          <i data-lucide="mail" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs text-slate-400 block">البريد الإلكتروني</span>
+          <a href="mailto:info@sarhegypt.com" class="text-sm font-bold text-navy-900 hover:text-brand-900">info@sarhegypt.com</a>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center shrink-0">
+          <i data-lucide="clock" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xs text-slate-400 block">ساعات العمل</span>
+          <span class="text-xs font-bold text-navy-900">السبت - الخميس (9 ص - 9 م)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form & Branches Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Right (7 Cols): Inquiry Form -->
+      <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xl space-y-6">
+        <div>
+          <h2 class="text-xl font-black text-navy-900">أرسل استفسارك أو طلبك</h2>
+          <p class="text-xs text-slate-500 mt-1">سيقوم أحد مستشارينا العقاريين بالتواصل معك خلال ساعتين كحد أقصى.</p>
+        </div>
+
+        <form onsubmit="handleGeneralContact(event)" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs font-bold text-slate-700 block mb-1">الاسم بالكامل *</label>
+              <input type="text" required placeholder="مثال: كريم سامي" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700">
+            </div>
+            <div>
+              <label class="text-xs font-bold text-slate-700 block mb-1">رقم الهاتف (واتساب) *</label>
+              <input type="tel" required dir="ltr" placeholder="+20 100 000 0000" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-800 text-right focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-xs font-bold text-slate-700 block mb-1">نوع الاستفسار</label>
+              <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700">
+                <option>شراء عقار سكني</option>
+                <option>استثمار تجاري / إداري</option>
+                <option>استئجار شقة أو فيلا</option>
+                <option>عرض عقار للبيع عبر المنصة</option>
+                <option>استشارة تمويل عقاري بنكي</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-xs font-bold text-slate-700 block mb-1">المنطقة المفضلة</label>
+              <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700">
+                <option>التجمع الخامس (القاهرة الجديدة)</option>
+                <option>الشيخ زايد وأكتوبر</option>
+                <option>العاصمة الإدارية الجديدة</option>
+                <option>المعادي</option>
+                <option>مدينة نصر ومصر الجديدة</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="text-xs font-bold text-slate-700 block mb-1">تفاصيل الرسالة أو الميزانية المتوقعة</label>
+            <textarea rows="4" required placeholder="اكتب استفسارك بالتفصيل..." class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs sm:text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-700"></textarea>
+          </div>
+
+          <button type="submit" class="bg-brand-900 hover:bg-brand-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-md text-sm flex items-center justify-center gap-2 transition w-full">
+            <i data-lucide="send" class="w-4 h-4 text-gold-400"></i>
+            <span>إرسال الرسالة الآن</span>
+          </button>
+        </form>
+
+        <div id="contact-success" class="hidden p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-xs font-bold text-center">
+          ✓ تم استلام رسالتك بنجاح! سيتواصل معك أحد خبرائنا قريباً.
+        </div>
+      </div>
+
+      <!-- Left (5 Cols): Physical Branches -->
+      <div class="lg:col-span-5 space-y-4">
+        <h3 class="text-base font-black text-navy-900 flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-5 h-5 text-gold-600"></i>
+          <span>فروعنا الرئيسية في مصر</span>
+        </h3>
+
+        <!-- Branch 1 -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-navy-900 text-sm">فرع التجمع الخامس (المقر الرئيسي)</h4>
+            <span class="text-[10px] bg-brand-50 text-brand-900 font-bold px-2 py-0.5 rounded-full">القاهرة الجديدة</span>
+          </div>
+          <p class="text-xs text-slate-500">شارع التسعين الشمالي، القطاع الأول، برج صرح بلازا، الدور الرابع.</p>
+          <div class="text-[11px] text-slate-400 pt-1 font-mono">هاتف: +20 2 2810 5000</div>
+        </div>
+
+        <!-- Branch 2 -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-navy-900 text-sm">فرع الشيخ زايد</h4>
+            <span class="text-[10px] bg-brand-50 text-brand-900 font-bold px-2 py-0.5 rounded-full">غرب القاهرة</span>
+          </div>
+          <p class="text-xs text-slate-500">محور 26 يوليو، بجوار أركان بلازا، مدخل الشيخ زايد 2.</p>
+          <div class="text-[11px] text-slate-400 pt-1 font-mono">هاتف: +20 2 3850 7000</div>
+        </div>
+
+        <!-- Branch 3 -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-navy-900 text-sm">فرع العاصمة الإدارية الجديدة</h4>
+            <span class="text-[10px] bg-brand-50 text-brand-900 font-bold px-2 py-0.5 rounded-full">الحي المالي</span>
+          </div>
+          <p class="text-xs text-slate-500">حي المال والأعمال، بالقرب من البرج الأيقوني والبنك المركزي.</p>
+          <div class="text-[11px] text-slate-400 pt-1 font-mono">هاتف: +20 109 988 7766</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="pt-16 mt-16 border-t border-slate-200">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h3 class="text-2xl font-black text-navy-900">الأسئلة الشائعة حول المنصة</h3>
+        <p class="text-slate-500 text-xs mt-1">إجابات سريعة على التساؤلات الأكثر تداولاً</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
+          <h4 class="font-bold text-navy-900 text-sm mb-1">هل توجد أي عمولة على المشتري عند الشراء عبر منصة صرح مصر؟</h4>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            لا، نحن نتيح للمشتري أو المستأجر التواصل المباشر مع صاحب العقار أو المطور المعتمد بنسبة 0% عمولة للمشتري.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
+          <h4 class="font-bold text-navy-900 text-sm mb-1">كيف تتأكد المنصة من صحة الأوراق وتراخيص العقارات؟</h4>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            لدينا إدارة قانونية تفحص عقود الملكية المسجلة وتراخيص البناء للوحدات الموثقة للتأكد من عدم وجود أي مخالفات أو مستحقات على الوحدة.
+          </p>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-xs">
+          <h4 class="font-bold text-navy-900 text-sm mb-1">كيف يمكنني نشر إعلان عقاري مجاناً؟</h4>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            يمكنك الدخول إلى صفحة "أضف عقارك مجاناً"، وملء البيانات الأساسية ومواصفات الوحدة ورفع الصور، وسيتم إدراجه فورياً في المنصة.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-navy-950 text-slate-300 pt-16 pb-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+      © 2026 صرح مصر للعقارات. جميع الحقوق محفوظة ومسجلة قانونياً.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function handleGeneralContact(e) {
+      e.preventDefault();
+      document.getElementById('contact-success').classList.remove('hidden');
+      showToast("تم استلام طلبك بنجاح! سيتواصل معك مستشارنا قريباً.", "check");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>

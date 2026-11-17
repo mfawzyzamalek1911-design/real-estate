@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حاسبة التمويل العقاري الذكية | صَرح مصر</title>
+  
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            tajawal: ['Tajawal', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+              950: '#022c22',
+            },
+            navy: {
+              800: '#1e293b',
+              900: '#0f172a',
+              950: '#020617',
+            },
+            gold: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-700 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-1.5 text-gold-400 font-semibold">
+          <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+          حسابات فورية مطابقة لمعايير البنك المركزي المصري 2026
+        </span>
+      </div>
+      <div class="flex items-center gap-5 text-slate-400">
+        <a href="tel:19955" class="hover:text-white transition flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-500"></i>
+          <span>الخط الساخن: <strong class="text-white font-mono">19955</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Main Navbar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Right side: Logo & Navigation Links (RTL) -->
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-900 via-brand-800 to-navy-900 flex items-center justify-center text-gold-500 shadow-md shadow-brand-950/20 group-hover:scale-105 transition-transform duration-200">
+              <i data-lucide="building-2" class="w-6 h-6 stroke-[2.2]"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-2xl font-black text-navy-900 tracking-tight flex items-center gap-1">
+                صَرح <span class="text-gold-600 font-light text-xl">مصر</span>
+              </span>
+              <span class="text-[11px] font-semibold text-slate-500 tracking-wider -mt-1">منصة العقارات الفاخرة</span>
+            </div>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1 text-sm font-semibold text-slate-700">
+            <a href="index.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">الرئيسية</a>
+            <a href="properties.html?type=للبيع" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للبيع</a>
+            <a href="properties.html?type=للإيجار" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">شقق للإيجار</a>
+            <a href="properties.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">كل العقارات</a>
+            <a href="calculator.html" class="px-3.5 py-2 rounded-xl text-brand-900 bg-brand-50 hover:bg-brand-100 border border-brand-200/60 font-bold transition flex items-center gap-1.5">
+              <i data-lucide="calculator" class="w-4 h-4 text-brand-700"></i>
+              <span>حاسبة التمويل</span>
+            </a>
+            <a href="contact.html" class="px-3.5 py-2 rounded-xl hover:text-brand-900 hover:bg-slate-100 transition">تواصل معنا</a>
+          </nav>
+        </div>
+
+        <!-- Left side: CTA & Favorites -->
+        <div class="flex items-center gap-3">
+          <a href="favorites.html" class="relative p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:text-red-500 hover:border-red-200 hover:bg-red-50 transition" title="العقارات المفضلة">
+            <i data-lucide="heart" class="w-5 h-5"></i>
+            <span class="absolute -top-1.5 -left-1.5 bg-red-500 text-white font-bold text-[11px] w-5 h-5 rounded-full flex items-center justify-center hidden" id="fav-count-pill">0</span>
+          </a>
+
+          <a href="add-property.html" class="flex items-center gap-2 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-700 text-white px-5 py-2.5 rounded-xl font-bold shadow-md shadow-gold-600/25 transition">
+            <i data-lucide="plus-circle" class="w-5 h-5"></i>
+            <span>أضف عقارك مجاناً</span>
+          </a>
+
+          <button id="mobile-nav-toggle" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <div class="bg-gradient-to-b from-brand-950 via-navy-950 to-navy-900 text-white py-14 px-4 sm:px-6 lg:px-8 border-b border-slate-800">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/20 text-gold-400 border border-gold-500/30 text-xs font-bold">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+        أداة الحساب المالية المعتمدة للتمويل العقاري في مصر
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-black">حاسبة التمويل العقاري الذكية</h1>
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        اكتشف بدقة القسط الشهري، الدفعة المقدمة، الحد الأدنى للدخل، والفوائد الإجمالية بناءً على مبادرات البنك المركزي المصري (3% و 8%) وأنظمة البنوك التجارية.
+      </p>
+    </div>
+  </div>
+
+  <!-- Calculator Main Grid -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full -mt-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Right Side (7 Cols): Advanced Controls Form -->
+      <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xl space-y-8">
+        
+        <div>
+          <h2 class="text-xl font-black text-navy-900 flex items-center gap-2">
+            <i data-lucide="sliders" class="w-5 h-5 text-brand-700"></i>
+            <span>تحديد بيانات التمويل العقاري</span>
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">حرّك المؤشرات أو أدخل القيم يدوياً لتحديث النتائج فوراً</p>
+        </div>
+
+        <!-- 1. Total Property Price -->
+        <div class="space-y-3 p-4 bg-slate-50 rounded-2xl border border-slate-200/60">
+          <div class="flex justify-between items-center">
+            <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <i data-lucide="banknote" class="w-4 h-4 text-brand-700"></i>
+              <span>سعر العقار الإجمالي المطلوب شراؤه</span>
+            </label>
+            <div class="flex items-center gap-1 bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-xs">
+              <input type="number" id="mc-price-input" value="3500000" min="200000" max="25000000" step="50000" oninput="updatePrice(this.value)" class="font-mono font-bold text-brand-900 text-sm focus:outline-none w-32 text-left" dir="ltr">
+              <span class="text-xs text-slate-500 font-bold">ج.م</span>
+            </div>
+          </div>
+          <input type="range" id="mc-price-slider" min="200000" max="20000000" step="50000" value="3500000" oninput="updatePrice(this.value)" class="w-full h-2.5 bg-slate-200 rounded-lg cursor-pointer">
+          <div class="flex justify-between text-[11px] text-slate-400 font-mono">
+            <span>200,000 ج.م</span>
+            <span>10,000,000 ج.م</span>
+            <span>20,000,000 ج.م</span>
+          </div>
+        </div>
+
+        <!-- 2. Down Payment -->
+        <div class="space-y-3 p-4 bg-slate-50 rounded-2xl border border-slate-200/60">
+          <div class="flex justify-between items-center">
+            <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <i data-lucide="pie-chart" class="w-4 h-4 text-gold-600"></i>
+              <span>الدفعة المقدمة المدفوعة من المشتري</span>
+              <span class="text-xs text-slate-500 font-normal" id="mc-down-percent-label">(20% من السعر)</span>
+            </label>
+            <div class="flex items-center gap-1 bg-white px-3.5 py-1.5 rounded-xl border border-slate-200 shadow-xs">
+              <input type="number" id="mc-down-input" value="700000" min="0" step="10000" oninput="updateFromDownInput(this.value)" class="font-mono font-bold text-gold-600 text-sm focus:outline-none w-32 text-left" dir="ltr">
+              <span class="text-xs text-slate-500 font-bold">ج.م</span>
+            </div>
+          </div>
+          <!-- Presets buttons -->
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="setDownPercent(10)" class="mc-down-btn text-xs font-bold px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:border-brand-700 transition">10%</button>
+            <button type="button" onclick="setDownPercent(15)" class="mc-down-btn text-xs font-bold px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:border-brand-700 transition">15%</button>
+            <button type="button" onclick="setDownPercent(20)" class="mc-down-btn text-xs font-bold px-3.5 py-1.5 rounded-lg border border-brand-700 bg-brand-900 text-white shadow-xs transition">20%</button>
+            <button type="button" onclick="setDownPercent(30)" class="mc-down-btn text-xs font-bold px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:border-brand-700 transition">30%</button>
+            <button type="button" onclick="setDownPercent(50)" class="mc-down-btn text-xs font-bold px-3.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:border-brand-700 transition">50%</button>
+          </div>
+          <input type="range" id="mc-down-slider" min="10" max="80" step="1" value="20" oninput="updateDownSlider(this.value)" class="w-full h-2.5 bg-slate-200 rounded-lg cursor-pointer">
+        </div>
+
+        <!-- 3. Years -->
+        <div class="space-y-3 p-4 bg-slate-50 rounded-2xl border border-slate-200/60">
+          <div class="flex justify-between items-center">
+            <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <i data-lucide="calendar" class="w-4 h-4 text-brand-700"></i>
+              <span>فترة التمويل والسداد (بالسنوات)</span>
+            </label>
+            <span id="mc-years-display" class="font-mono font-bold text-brand-900 text-sm bg-white px-3 py-1 rounded-xl border border-slate-200">20 سنة (240 شهراً)</span>
+          </div>
+          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2">
+            <button type="button" onclick="setLoanYears(5)" class="mc-years-btn text-xs font-bold py-2.5 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">5 سنوات</button>
+            <button type="button" onclick="setLoanYears(10)" class="mc-years-btn text-xs font-bold py-2.5 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">10 سنوات</button>
+            <button type="button" onclick="setLoanYears(15)" class="mc-years-btn text-xs font-bold py-2.5 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">15 سنة</button>
+            <button type="button" onclick="setLoanYears(20)" class="mc-years-btn text-xs font-bold py-2.5 rounded-xl border border-brand-700 bg-brand-900 text-white shadow-xs transition">20 سنة</button>
+            <button type="button" onclick="setLoanYears(25)" class="mc-years-btn text-xs font-bold py-2.5 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">25 سنة</button>
+            <button type="button" onclick="setLoanYears(30)" class="mc-years-btn text-xs font-bold py-2.5 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">30 سنة</button>
+          </div>
+        </div>
+
+        <!-- 4. Rate Presets -->
+        <div class="space-y-3 p-4 bg-slate-50 rounded-2xl border border-slate-200/60">
+          <label class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+            <i data-lucide="percent" class="w-4 h-4 text-gold-600"></i>
+            <span>نوع مبادرة التمويل ومعدل الفائدة السنوية المتناقصة</span>
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <button type="button" data-rate="3" onclick="setInterestPreset(3)" class="mc-rate-btn text-right p-3 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">
+              <span class="block text-sm font-bold text-brand-900">مبادرة 3%</span>
+              <span class="text-[11px] text-slate-400 leading-tight">لمحدودي ومتوسطي الدخل (شقق سكن لكل المصريين)</span>
+            </button>
+            <button type="button" data-rate="8" onclick="setInterestPreset(8)" class="mc-rate-btn text-right p-3 rounded-xl border-2 border-brand-700 bg-brand-50/90 shadow-xs transition">
+              <span class="block text-sm font-bold text-brand-900">مبادرة 8%</span>
+              <span class="text-[11px] text-emerald-700 font-bold leading-tight">متوسطي الدخل (سكن مصر، دار مصر وجنة)</span>
+            </button>
+            <button type="button" data-rate="16" onclick="setInterestPreset(16)" class="mc-rate-btn text-right p-3 rounded-xl border border-slate-200 bg-white hover:border-brand-700 transition">
+              <span class="block text-sm font-bold text-navy-900">تمويل تجاري 16%</span>
+              <span class="text-[11px] text-slate-400 leading-tight">بنوك استثمارية وعقارات فاخرة حرة</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Lead Form Box -->
+        <div class="border-t border-slate-100 pt-6">
+          <h3 class="text-base font-black text-navy-900 mb-2">طلب استشارة تمويل عقاري مجانية</h3>
+          <p class="text-xs text-slate-500 mb-4">أرسل بياناتك وسيتواصل معك مستشار معتمد من البنوك الشريكة للمساعدة في استيفاء الأوراق.</p>
+          <form onsubmit="handleMortgageLeadSubmit(event)" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <input type="text" required placeholder="الاسم ثلاثي" class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-700">
+            <input type="tel" required dir="ltr" placeholder="رقم الهاتف" class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs sm:text-sm text-slate-800 text-right focus:outline-none focus:ring-2 focus:ring-brand-700">
+            <button type="submit" class="bg-brand-900 hover:bg-brand-800 text-white font-bold py-2.5 px-4 rounded-xl text-xs shadow-md transition">
+              إرسال طلب الاستشارة
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Left Side (5 Cols): Sticky Results Breakdown Card -->
+      <div class="lg:col-span-5">
+        <div class="sticky top-28 bg-navy-950 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-800 space-y-6">
+          
+          <div class="border-b border-slate-800 pb-5">
+            <span class="text-xs text-slate-400 block mb-1">القسط الشهري المتوقع سداده:</span>
+            <div class="flex items-baseline gap-2">
+              <span class="text-3xl sm:text-4xl font-black text-white font-mono tracking-tight" id="mc-result-monthly">23,420</span>
+              <span class="text-gold-400 font-bold text-sm">ج.م / شهرياً</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2 flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+              <span>الحد الأدنى للدخل الشهري المطلوب: <strong class="text-white font-mono" id="mc-result-income">58,550 ج.م</strong></span>
+            </p>
+          </div>
+
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+              <span class="text-slate-400">سعر العقار الأساسي:</span>
+              <span class="font-mono font-bold text-white" id="mc-result-price">3,500,000 ج.م</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+              <span class="text-slate-400">الدفعة المقدمة (الكاش):</span>
+              <span class="font-mono font-bold text-gold-400" id="mc-result-down">700,000 ج.م</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+              <span class="text-slate-400">مبلغ التمويل المقترض من البنك:</span>
+              <span class="font-mono font-bold text-white" id="mc-result-principal">2,800,000 ج.م</span>
+            </div>
+            <div class="flex justify-between py-1.5 border-b border-slate-800/80">
+              <span class="text-slate-400">إجمالي الفوائد البنكية طوال المدة:</span>
+              <span class="font-mono font-bold text-emerald-400" id="mc-result-interest">2,820,560 ج.م</span>
+            </div>
+            <div class="flex justify-between py-2.5 bg-slate-900/90 px-3.5 rounded-2xl border border-slate-800">
+              <span class="text-gold-400 font-bold text-xs">إجمالي السداد الكلي (أصل + فوائد):</span>
+              <span class="font-mono font-bold text-gold-300 text-sm" id="mc-result-total">5,620,560 ج.م</span>
+            </div>
+          </div>
+
+          <!-- Distribution Ratio -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span> أصل التمويل (<span id="mc-bar-principal-pct">50%</span>)</span>
+              <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-gold-500 inline-block"></span> الفوائد (<span id="mc-bar-interest-pct">50%</span>)</span>
+            </div>
+            <div class="w-full h-3 bg-slate-800 rounded-full overflow-hidden flex">
+              <div id="mc-bar-principal" class="bg-emerald-500 h-full transition-all duration-300" style="width: 50%;"></div>
+              <div id="mc-bar-interest" class="bg-gold-500 h-full transition-all duration-300" style="width: 50%;"></div>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="space-y-3 pt-2">
+            <button onclick="applyMortgageToProperties()" class="w-full bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-gold-600/20 transition">
+              <i data-lucide="filter" class="w-4 h-4"></i>
+              <span>تصفية الشقق المناسبة لهذا القسط</span>
+            </button>
+            <a href="properties.html" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold py-2.5 rounded-xl flex items-center justify-center gap-2 text-xs border border-slate-700 transition">
+              <span>عرض جميع العقارات المتاحة للبيع</span>
+            </a>
+          </div>
+
+          <div class="text-[11px] text-slate-500 leading-relaxed text-center">
+            * الحسابات تقديرية وفق شروط البنك المركزي المصري (نسبة عبء الدين 40% من صافي الدخل الشهري).
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-navy-950 text-slate-300 pt-16 pb-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-slate-500">
+      © 2026 صرح مصر للعقارات. جميع الحقوق محفوظة ومسجلة قانونياً.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/calculator.js"></script>
+</body>
+</html>

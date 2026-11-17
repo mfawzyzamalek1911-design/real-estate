@@ -1,0 +1,130 @@
+/* ==============================================================
+   صَرح مصر - المنصة العقارية الأولى
+   Styles & Custom Components
+   ============================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap');
+
+:root {
+  --font-main: 'Cairo', sans-serif;
+  --font-secondary: 'Tajawal', sans-serif;
+  --brand-50: #f0fdf4;
+  --brand-100: #dcfce7;
+  --brand-500: #10b981;
+  --brand-700: #047857;
+  --brand-800: #065f46;
+  --brand-900: #064e3b;
+  --brand-950: #022c22;
+  --gold-400: #fbbf24;
+  --gold-500: #f59e0b;
+  --gold-600: #d97706;
+  --gold-700: #b45309;
+  --navy-800: #1e293b;
+  --navy-900: #0f172a;
+  --navy-950: #020617;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #F8FAFC;
+  color: #1E293B;
+  text-align: right;
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glassmorphism & Blurs */
+.badge-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(15, 23, 42, 0.65);
+}
+
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.glass-card {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Hero Background */
+.hero-bg {
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(6, 78, 59, 0.85)), 
+                    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Floating animation */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Card hover glow */
+.property-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+.property-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+/* Range input custom styling */
+input[type="range"] {
+  accent-color: #047857;
+}
+
+/* Aspect ratio helpers */
+.aspect-card {
+  aspect-ratio: 16 / 10;
+}
+
+/* Active Nav Indicator */
+.nav-link-active {
+  color: #064e3b !important;
+  background-color: #f0fdf4 !important;
+  font-weight: 700;
+}
+
+/* Number font */
+.font-numeric {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  font-feature-settings: "tnum";
+}
+
+/* Pulse dot animation */
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.9); }
+}
+
+.pulse-dot {
+  animation: pulseDot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
